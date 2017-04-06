@@ -1,0 +1,69 @@
+body {
+	padding: 1em;
+	color: grey;
+}
+
+#root {
+	width : 320px;
+	margin: 0 auto;
+}
+
+section {
+	border: solid 2px grey;
+	padding: 1em;
+}
+
+section section {
+	border: dashed 2px grey;
+}
+
+section + section {
+	margin-top: 1em;
+}
+
+li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+li + li {
+	margin-top: 1em;
+}
+
+li span {
+	visibility: hidden;
+	display: inline-block;
+	width: 20px;height: 20px;line-height: 20px;
+	background: grey;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+li:hover span {
+	visibility: visible;
+}
+
+li p {
+	line-height: 100%;
+	margin: 0;
+	margin-left: 0.5em;
+	display: inline-block;
+}
+
+li label {
+	width: 100%;
+	cursor: pointer;
+}
+
+li [type=checkbox] {
+	margin: 0;padding: 0;
+	width: 20px;height: 20px;
+}
+
+input[data-checked=true] + p {
+	text-decoration: line-through;
+	color: lightgrey;
+}
